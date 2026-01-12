@@ -18,25 +18,30 @@ public class PersonTest {
 	}
 
 	@Test
+	void testGetName() {
+		assertEquals("Jane", p1.getName());
+	}
+
+	@Test
 	void addParentsTest() {
 		p3.addParents(p1, p2);
 
-		assertEquals(p3.getMother(), p1);
-		assertEquals(p3.getFather(), p2);
+		assertEquals(p1, p3.getMother());
+		assertEquals(p2, p3.getFather());
 	}
 
 	@Test
 	void addChildTest() {
 		p1.addChild(p3);
 
-		assertEquals(p1.getChildren().get(0), p3);
+		assertEquals(p3, p1.getChildren().get(0));
 	}
 
 	@Test
 	void addSiblingTest() {
 		p1.addSibling(p2);
 
-		assertEquals(p1.getSiblings().get(0), p2);
+		assertEquals(p2, p1.getSiblings().get(0));
 	}
 
 	@Test
@@ -48,10 +53,9 @@ public class PersonTest {
 		p3.addChild(p4);
 		p3.addChild(p5);
 
-		assertEquals(p1.getGrandChildren().get(0), p4);
-		assertEquals(p1.getGrandChildren().get(1), p5);
-
-		assertEquals(p1.getGrandChildren(), Arrays.asList(p4, p5));
+		assertEquals(p4, p1.getGrandChildren().get(0));
+		assertEquals(p5, p1.getGrandChildren().get(1));
+		assertEquals(Arrays.asList(p4, p5), p1.getGrandChildren());
 	}
 
 	@Test
@@ -60,8 +64,7 @@ public class PersonTest {
 
 		p1.addPet(kishka);
 
-		assertEquals(p1.getPets().size(), 1);
-		assertEquals(p1.getPets().get(0), kishka);
+		assertEquals(1, p1.getPets().size());
+		assertEquals(kishka, p1.getPets().get(0));
 	}
-
 }
