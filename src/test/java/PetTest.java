@@ -12,35 +12,35 @@ public class PetTest {
 	}
 
 	@Test
-	void getNameTest() {
-		assertEquals(p1.getName(), "Grauet");
+	void testGetName() {
+		assertEquals("Grauet", p1.getName());
 	}
 
 	@Test
-	void setNameTest() {
+	void testSetName() {
 		p1.setName("Gratje");
-		assertEquals(p1.getName(), "Gratje");
+		assertEquals("Gratje", p1.getName());
 	}
 
 	@Test
-	void getAgeTest() {
-		assertEquals(p1.getAge(), 8);
+	void testGetAge() {
+		assertEquals(8, p1.getAge());
 	}
 
 	@Test
-	void setAgeTest() {
+	void testSetAge() {
 		p1.setAge(28);
-		assertEquals(p1.getAge(), 28);
+		assertEquals(28, p1.getAge());
 	}
 
 	@Test
-	void getSpeciesTest() {
-		assertEquals(p1.getSpecies(), "poes");
+	void testGetSpecies() {
+		assertEquals("poes", p1.getSpecies());
 	}
 
 	@Test
-	void setSpeciesTest() {
+	void testSetSpecies() {
 		p1.setSpecies("kat");
-		assertEquals(p1.getSpecies(), "kat");
+		assertEquals("kat", p1.getSpecies());
 	}
 }
