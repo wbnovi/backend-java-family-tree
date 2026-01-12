@@ -22,6 +22,7 @@ public class Person extends Entity {
 		children = new ArrayList<>();
 		pets = new ArrayList<>();
 	}
+
 	public Person(String name, String middleName, String lastName, int age, String sex) {
 		super(name, age);
 		this.middleName = middleName;
